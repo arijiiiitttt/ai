@@ -1,0 +1,18 @@
+{
+  "name": "gsoc-pr-creator",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@openrouter/ai-sdk-provider": "^1.2.8",
+    "@types/express": "^5.0.5",
+    "ai": "^5.0.105",
+    "express": "^5.2.0"
+  }
+}
