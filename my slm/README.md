@@ -144,25 +144,7 @@ For a **private** model repo, add `HF_TOKEN` as a secret in the Space settings s
 
 
 ## Architecture
-
-```
-  your text ──▶ BPE tokenizer ──▶ token ids
-                                      │
-                                      ▼
-                        ┌──────────────────────────┐
-   train (JAX, CPU/GPU) │  GPT: embeddings         │
-                        │  N × [attention + MLP]   │──▶ model.safetensors
-                        │  tied output layer       │
-                        └──────────────────────────┘
-                                      │ push / pull
-                                      ▼
-                              Hugging Face Hub
-                                      │
-                    ┌─────────────────┴─────────────────┐
-                    ▼                                   ▼
-          uv run slm.py gen                    Space (Gradio demo)
-       (numpy inference, no jax)            loads the same weights online
-```
+<img src="./public/slm.png"/>
 
 | Part | Choice |
 |---|---|
