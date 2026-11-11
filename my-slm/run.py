@@ -1,3 +1,7 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["numpy", "tokenizers"]
+# ///
 """Run the tiny language model. Needs only: pip install numpy tokenizers
 Usage: python run.py "The history of the Roman Empire" --tokens 120 --temp 0.8
 """

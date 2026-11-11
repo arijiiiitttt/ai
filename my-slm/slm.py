@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["numpy", "tokenizers", "safetensors", "huggingface_hub", "jax", "optax"]
+# ///
 """slm.py - train a small GPT-style model whenever you want, keep it on Hugging Face, use it anywhere.
 
   python slm.py train --repo YOU/my-slm --data my.txt --steps 2000   # train (or resume), then push
