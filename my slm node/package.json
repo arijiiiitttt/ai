@@ -1,0 +1,22 @@
+{
+  "name": "my-slm-node",
+  "version": "1.0.0",
+  "description": "Train a small language model, keep it on Hugging Face, use it anywhere (Node.js twin of slm.py)",
+  "type": "module",
+  "bin": { "slm": "slm.mjs" },
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "train": "node slm.mjs train",
+    "gen": "node slm.mjs gen",
+    "pull": "node slm.mjs pull",
+    "serve": "node slm.mjs serve",
+    "space": "node slm.mjs space"
+  },
+  "dependencies": {
+    "@huggingface/hub": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-wasm": "^4.22.0"
+  }
+}
