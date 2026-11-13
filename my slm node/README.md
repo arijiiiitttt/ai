@@ -165,24 +165,8 @@ Outputs from random sampling will differ between the two (different random gener
 
 ## Architecture
 
-```
-  your text ──▶ BPE tokenizer ──▶ token ids
-                                      │
-                                      ▼
-                        ┌──────────────────────────┐
-   train (TensorFlow.js)│  GPT: embeddings         │
-                        │  N × [attention + MLP]   │──▶ model.safetensors
-                        │  tied output layer       │
-                        └──────────────────────────┘
-                                      │ push / pull
-                                      ▼
-                              Hugging Face Hub
-                                      │
-                    ┌─────────────────┴─────────────────┐
-                    ▼                                   ▼
-             node slm.mjs gen                  Space (Docker, node slm.mjs serve)
-        (plain JavaScript, no packages)         loads the same weights online
-```
+<img src="./public/slm.png"/>
+
 
 | Part | Choice |
 |---|---|
